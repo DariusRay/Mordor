@@ -14,7 +14,7 @@ module.exports = {
     return embed;
   },
   
-  initiate: (discord, message) => {
+  initiatecommands: (discord, message) => {
     let embed = new discord.RichEmbed()
       .setTitle('Sauron')
       .setColor('#d1f442')
