@@ -2,7 +2,7 @@ module.exports = {
 
   initiate: (discord, message) => {
     let embed = new discord.RichEmbed()
-      .setTitle('Sauroon')
+      .setTitle('Sauron')
       .setColor('#d1f442')
       .setThumbnail("https://forum.l2mordor.com/styles/default/xenforo/logom.png")
       .setDescription(
@@ -10,6 +10,16 @@ module.exports = {
           `Hello I am Sauron! I am here to assist with dkp management. This will be used to track CP activity.\n`+
           `\n - *implemented by **${message.author.username}**`
       )
+
+    return embed;
+  },
+  
+  initiate: (discord, message) => {
+    let embed = new discord.RichEmbed()
+      .setTitle('Sauron')
+      .setColor('#d1f442')
+      .setThumbnail("https://forum.l2mordor.com/styles/default/xenforo/logom.png")
+
       .addBlankField(true)
       .addField('start', '(**leader**) *Starts the raid, allowing players to join. After 15 minutes, the raid will begin and 1dkp will be awarded for all players ontime.*')
       .addField('end', '(**leader**) *Ends the raid, disables commands, and resets ontime for next raid.*')
@@ -26,6 +36,7 @@ module.exports = {
       .setTimestamp();
     return embed;
   },
+
 
   join: (discord, message) => {
     let embed = new discord.RichEmbed()
