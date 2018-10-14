@@ -2,7 +2,7 @@ module.exports = {
 
   initiate: (discord, message) => {
     let embed = new discord.RichEmbed()
-      .setTitle('Sauron')
+      .setTitle('Sauroon')
       .setColor('#d1f442')
       .setThumbnail("https://forum.l2mordor.com/styles/default/xenforo/logom.png")
       .setDescription(
