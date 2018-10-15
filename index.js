@@ -108,11 +108,10 @@ function balance(message, database) {
   var collection = database.collection('raid-groups');
   collection.find({}).toArray((err, table) => {
     for (let row in table) {
-      if (table[row]['active'] && table[row]['raid'] === message.channel.name) {
         for (let user in table[row]['members']) {if (message.author.username === user) {
           message.author.send(response.raidBalance(discord, message, table[row]['members'][user]));
         }}
-      }
+
     }
   });
 }
