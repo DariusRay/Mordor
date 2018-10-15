@@ -121,10 +121,8 @@ function display(message, database) {
   collection.find({}).toArray((err, table) => {
 
     var active = {};
-    for (let row in table) {
-        for (let user in table[row]['members']) {active[user] = table[row]['members'][user]}
-
-    }
+    for (let row in table)
+    for (let user in table[row]['members']) {active[user] = table[row]['members'][user]}
 
     var view = ''; for (let user in active) {if (ontime[message.channel.name].indexOf(user) > -1) {view = view + `\n**${active[user]}** *${user}*`}}
     message.channel.send(response.raidDisplay(discord, message, view));
